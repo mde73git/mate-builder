@@ -16,7 +16,7 @@ action_title() {
 action_gitup() {
 	if [ ! -d "${1}" ]; then
 		echo -e "\nGit Project ${1} is missing. Cloning it first."
-		git clone ${GITHUB_URL}/${2}${1}.git && git submodule init && git submodule update --remote --recursive || exit 1
+		git clone --recursive-submodules ${GITHUB_URL}/${2}${1}.git && git submodule init && git submodule update --remote --recursive || exit 1
 	fi
 	if [ ! -d "${1}" ]; then
 		echo "Git Project ${1} is still missing. Abort."
