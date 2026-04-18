@@ -1,7 +1,7 @@
 mate-builder
 ============
 
-Building MATE desktop from scratch made easy.
+Building MATE desktop from scratch made fairly easy.
 
 mate-builder is a shell script that builds and installs MATE Desktop (http://www.mate-desktop.org/).
 
