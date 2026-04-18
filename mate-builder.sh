@@ -70,7 +70,11 @@ action_build() {
 	fi
 	action_title "BUILDING ${1}"
 	echo "==== PREPARING."
-	${GEN_SCRIPT} --prefix=${TARGET_DIR} --sysconfdir=${TARGET_DIR}/etc --localstatedir=/var || exit 2
+	if [ ${1} = "mate-indicator-applet" ]; then
+	    ${GEN_SCRIPT} --prefix=${TARGET_DIR} --with-ayatana-indicators --sysconfdir=${TARGET_DIR}/etc --localstatedir=/var || exit 2
+	else
+	    ${GEN_SCRIPT} --prefix=${TARGET_DIR} --sysconfdir=${TARGET_DIR}/etc --localstatedir=/var || exit 2
+	fi
 	echo "==== READY TO MAKE."
 	[ "x${2}" = "xauto" ] || action_pause
 	make || exit 2
