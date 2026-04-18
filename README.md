@@ -7,7 +7,7 @@ mate-builder is a shell script that builds and installs MATE Desktop (http://www
 
 Intended audience:
 ------------------
-1) Not for end-users.
+1) Definitely not for end-users.
 
 Don't use this script if you are a 'normal' user of MATE Desktop.
 If you want to run MATE Destkop on your system, you should use the package manager of your Linux distribution or install Linux Mint MATE Edition (http://www.linuxmint.com/).
